@@ -5,8 +5,9 @@ vignette - https://satijalab.org/seurat/v3.0/sctransform_vignette.html
 This script is modified to fit the NA-2019 project
 
 ```R
-module load R/3.5.1
-library(Seurat)
+module load Seurat/3.0.0
+#works using R/3.5.2
+
 library(sctransform)
 library(cowplot)
 library(ggplot2)

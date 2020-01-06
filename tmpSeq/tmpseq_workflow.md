@@ -1,3 +1,10 @@
+###################################################
+###################################################
+#### Written by Karthigayini Sivaprakasam
+#### 2019-12-30
+###################################################
+###################################################
+
 For tmp-Seq data, follow the following steps
 
 1. Trim the illumina adaptors and cut 3Bp from the 5' end of the read1 - as per email conversations with standford group and the reference paper 

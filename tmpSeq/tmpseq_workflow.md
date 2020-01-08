@@ -461,16 +461,13 @@ To denormalize and get counts :is to multiply the RPM values by the library size
 ```R
 #general workflow
 module load R/3.2.1-intel
-cat config.txt
-Unx_merged_sorted.bam:Con_merged_sorted.bam     -1      Control
-Unx_merged_sorted.bam:CPT_merged_sorted.bam     -1      CPT
-Unx_merged_sorted.bam:DRB_merged_sorted.bam     -1      DRB
-Unx_merged_sorted.bam:ETO_merged_sorted.bam     -1      ETO
+Con_merged_sorted.bam:Unx_merged_sorted.bam	-1	Control
+CPT_merged_sorted.bam:Unx_merged_sorted.bam	-1	CPT
+DRB_merged_sorted.bam:Unx_merged_sorted.bam	-1	DRB
+ETO_merged_sorted.bam:Unx_merged_sorted.bam	-1	ETO
 
-~/tools/ngsplot-develop/bin/ngs.plot.r -G mm10 -R genebody -C config.txt -SS same -SE 0 -MW 2  -O pair_genebody
 ~/tools/ngsplot-develop/bin/ngs.plot.r -G mm10 -R tss -D refseq -Al bin -C config.txt -SE 0 -MW 5  -O Tss_normalized_mw5
-~/tools/ngsplot-develop/bin/ngs.plot.r -G mm10 -R tss -L 5000 -D refseq -Al bin -C config.txt -SE 0 -MW 5  -O unnormalized_tss_mw5
-
+~/tools/ngsplot-develop/bin/ngs.plot.r -G mm10 -R genebody -L 5000 -D refseq -Al bin -C config.txt -SE 0 -MW 5  -O unnormalized_tss_mw5
 ```
 
 Code for custom normalization - From discussions forum
